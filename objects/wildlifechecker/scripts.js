@@ -50,14 +50,7 @@ const hasHabitat = (animal) => {
 console.log(hasHabitat(tiger));
 console.log(hasHabitat(elephant));
 
-/*
-Now create a function called getProperty.
 
-The function should take two parameters: animal and propertyName.
-
-Return the value of the property using bracket notation.
-
-After creating the function, use console.log to call getProperty(tiger, "species") and getProperty(elephant, "age") so you can see the returned values in the console.*/
 const getProperty = (animal, propertyName) => {
   return animal[propertyName];
 };
