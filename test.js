@@ -1,17 +1,36 @@
-//create a getVowelCount function with a parameter called sentence,Your function should return the total number of vowels in a sentence.
-function getVowelCount(sentence) {
-    let count = 0;
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-    for (let i = 0; i < sentence.length; i++) {
-        if (vowels.includes(sentence[i].toLowerCase())) {
-            count++;
+function drawPyramid(rows) {
+    for (let i = 0; i < rows; i++) {
+        let str = '';
+        
+        // Add spaces before 'o's 
+        for (let j = 1; j <= rows - i; j++){
+            str += ' ';
         }
+  
+        // Add 'O's to the string
+        for (let k = 1; k <= 2*i + 1; k++) {
+           str += 'o'; 
+        }
+        
+        console.log(str);
     }
-    return count;
 }
 
-//test your getVowelCount function.
+drawPyramid(5);
+console.log('------------------');
+function drawPyramid2(rows) {
+    for (let i = 0; i < rows; i++) {
+        let str = '';
+        // Add spaces before 'x's
+        for (let j = 1; j <= rows - i; j++){
+            str += ' ';
+        }
+        // Add 'X's to the string
+        for (let k = 1; k <= 2*i + 1; k++) {
+           str += 'x'; 
+        }
+        console.log(str);
+    }
+}
 
-//Create a vowelCount variable and assign it the result of calling the getVowelCount function with the argument of "Apples are tasty fruits"
-let vowelCount = getVowelCount("Apples are tasty fruits");
-//
+drawPyramid2(5);
